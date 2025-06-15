@@ -11,7 +11,7 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <title>Authentication is Fun</title>
+    <title>ADMIN DATABASE</title>
     <style>
       body {
         text-align: center;
@@ -25,7 +25,6 @@
 </head>
 
 <body>
-    
     <div id="authForm">
       <h2>Sign Up or Sign In</h2>
       <input type="email" placeholder="email" id="userEmail" />
@@ -56,8 +55,6 @@
           <button id="update">Update</button>
           <button id="delete">Delete</button>
         </div>
-
-        
       </div>
   
       <div class="fetch-database">
@@ -71,7 +68,6 @@
     </div>
 
     <script type="module">
-      //Update the below URL with the appropriate version if necessary.
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
       import {
         getAuth,
@@ -79,19 +75,17 @@
         signInWithEmailAndPassword,
         onAuthStateChanged,
         signOut,
-        //Update the below URL with the appropriate version if necessary.
       } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
-      // INSERT YOUR FIREBASE CONFIG OBJECT HERE
       const firebaseConfig = {
         apiKey: "AIzaSyAtMyOxgEga6v-rzu6B-GFQ9MfVQ4TUp_w",
-  authDomain: "signn-eecfb.firebaseapp.com",
-  databaseURL: "https://signn-eecfb-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "signn-eecfb",
-  storageBucket: "signn-eecfb.firebasestorage.app",
-  messagingSenderId: "272933420274",
-  appId: "1:272933420274:web:c4601c05e3c2d050cd646b"
-};
+        authDomain: "signn-eecfb.firebaseapp.com",
+        databaseURL: "https://signn-eecfb-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "signn-eecfb",
+        storageBucket: "signn-eecfb.firebasestorage.app",
+        messagingSenderId: "272933420274",
+        appId: "1:272933420274:web:c4601c05e3c2d050cd646b"
+      };
 
       const app = initializeApp(firebaseConfig);
       const auth = getAuth(app);
